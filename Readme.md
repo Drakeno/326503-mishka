@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Владислав Кожевников](https://up.htmlacademy.ru/adaptive/10/user/326503).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Протасов](https://htmlacademy.ru/profile/id209392).
 
 ---
 
