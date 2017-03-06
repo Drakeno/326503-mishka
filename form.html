@@ -8,69 +8,94 @@
 
 <body>
 
-  Лого
+  <header class="main-header">
+    <div class="main-header__logo">
+      <a href="index.html"><img src="img/mishka-logo.svg" alt="Магазин Мишка"></a>
+    </div>
+    <nav class="main-navigation">
+      <button class="main-navigation__btn" type="button">Меню</button>
+      <ul class="main-navigation__dropdown">
+        <li class="main-navigation__link"><a href="catalog.html">Каталог товаров</a></li>
+        <li class="main-navigation__link"><a>Вязание на заказ</a></li>
+        <li class="main-navigation__link main-navigation__link--search"><a href="#">Поиск по сайту</a></li>
+        <li class="main-navigation__link main-navigation__link--cart"><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  Бутерброд
+  <main class="form-page">
+    <h1>Вязание на заказ</h1>
 
-  Вязание на заказ
+    <p class="form-page__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <div class="form-page__filters">
+        <span class="form-page__title">Тип</span>
+        <input id="furniture" type="radio" value="furniture" name="item-type">
+        <label for="furniture">Аксессуар для интерьера</label>
+        <input id="toy" type="radio" value="toy" name="item-type" checked>
+        <label for="toy">Детская игрушка</label>
+      </div>
 
-  Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      <div class="form-page__filters">
+        <span class="form-page__title">Цвет</span>
+        <input id="white" type="checkbox" value="white" name="color" checked>
+        <label for="white">Белый</label>
+        <input id="grey" type="checkbox" value="grey" name="color" checked>
+        <label for="grey">Серый</label>
+        <input id="tiffany" type="checkbox" value="tiffany" name="color">
+        <label for="tiffany">«Тиффани»</label>
+        <input id="black" type="checkbox" value="black" name="color">
+        <label for="black">Черный</label>
+        <input id="pink" type="checkbox" value="pink" name="color">
+        <label for="pink">Розовый</label>
+        <input id="orange" type="checkbox" value="orange" name="color">
+        <label for="orange">Оранжевый</label>
+      </div>
 
-  -----Тип
+      <div class="form-page__data">
+        <span class="form-page__title">ФИО</span>
+        <label for="first-name">Имя:</label>
+          <input class="form-page__field" type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
+        <label for="surname">Фамилия:</label>
+          <input class="form-page__field" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+        <label for="patronym">Отчество:</label>
+          <input class="form-page__field" type="text" name="patronym" id="patronym" placeholder="Отчество, если желаете">
 
-  Аксессуар для
-интерьера
+        <span class="form-page__title">Тел</span>
+        <label>
+          <input class="form-page__field form-page__field--phone" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*" required>
+        </label>
 
-Детская игрушка
+        <span class="form-page__title">E-mail</span>
+        <label>
+          <input class="form-page__field form-page__field--email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+        </label>
 
-----Цвет
+        <span class="form-page__title">Доп</span>
+        <label>
+          <textarea class="form-page__field form-page__field--wishes" name="wishes">Опишите все ваши пожелания к заказу</textarea>
+        </label>
 
-Белый
+        <p class="form-page__hint">*Поля обязательны для заполнения</p>
+      </div>
 
-Серый
+      <input class="form-page__submit ghost-btn" type="submit" value="Отправить заказ">
+    </form>
+  </main>
 
-«Тиффани»
-
-Черный
-
-Розовый
-
-Оранжевый
-
-----ФИО
-
-Имя
-
-Введите ваше имя*
-
-Фамилия:
-
-Укажите фамилию*
-
-Отчество:
-
-Отчество, если желаете
-
------Тел
-
-+7 ХХХ ХХ ХХ*
-
------E-mail
-
-Ваш Email*
-
-------Доп
-
-Опишите все ваши
-пожелания к заказу
-
-*Поля обязательны для заполнения
-
-Отправить заказ
-
-vk, fb, tw
-
-Разработано
+  <footer class="page-footer">
+    <div class="page-footer__social">
+      <span class="social-links">
+    <a class="social-link social-link--vkontakte" href="#">Вконтакте</a>
+    <a class="social-link social-link--facebook" href="#">Фейсбук</a>
+    <a class="social-link social-link--twitter" href="#">твиттер</a>
+  </span>
+    </div>
+    <div class="page-footer__copyright">
+      <p>Разработано</p>
+      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
+  </footer>
 
 </body>
 
