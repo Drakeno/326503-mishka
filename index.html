@@ -7,9 +7,113 @@
 </head>
 
 <body>
+  <header class="main-header">
+    <div class="main-header__logo">
+      <img src="img/mishka-logo.svg" alt="Магазин Мишка">
+    </div>
+    <nav class="main-navigation">
+      <button class="main-navigation__btn" type="button">Меню</button>
+      <ul class="main-navigation__dropdown">
+        <li class="main-navigation__link"><a href="#">Каталог товаров</a></li>
+        <li class="main-navigation__link"><a href="#">Вязание на заказ</a></li>
+        <li class="main-navigation__link main-navigation__link--search"><a href="#">Поиск по сайту</a></li>
+        <li class="main-navigation__link main-navigation__link--cart"><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main class="main-page">
+    <h1 class="main-page__title">Милые штуки ручной работы для дома</h1>
+    <a href="#" class="main-page__big-btn main-page__big-btn--furniture">Предметы интерьера </a>
+    <a href="#" class="main-page__big-btn main-page__big-btn--toys">Детские игрушки</a>
+    <div class="main-item main-page--separator">
+      <h2 class="main-item__title">Вязаные корзинки</h2>
+      <span class="main-item__weekly">Товар недели</span>
+      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+      <table>
+        <tr>
+          <td>Цвет:</td>
+          <td>«Тиффани»/серый</td>
+        </tr>
+        <tr>
+          <td>Диаметр:</td>
+          <td>25 см</td>
+        </tr>
+        <tr>
+          <td>Высота:</td>
+          <td>15 см</td>
+        </tr>
+      </table>
+      <img src="http://placehold.it/260x315" alt="">
+      <span class="main-item__price">Цена: 990 руб.</span>
 
+      <a href="" class="ghost-btn">Заказать</a>
+    </div>
+    <div class="about">
+      <h3 class="about__title">Коротко о нас:</h3>
+      <ul class="about__list">
+        <li class="about__list-item about__list-item--flower">Экологически чистые материалы</li>
+        <li class="about__list-item about__list-item--banknote">Скандинавский стиль по российской цене</li>
+        <li class="about__list-item about__list-item--heart">Увеличивает лайки на фотографиях</li>
+        <li class="about__list-item about__list-item--thread">Связано вручную с любовью и умилением</li>
+        <li class="about__list-item about__list-item--rocket">Поддержка отечественного производителя</li>
+        <li class="about__list-item about__list-item--box">Поставляется в подарочной упаковке</li>
+      </ul>
+    </div>
 
+    <div class="reviews main-page--separator">
+      <h3 class="reviews__title">Отзывы:</h3>
+      <div class="reviews__list">
+        <blockquote class="review__item">
+          <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше
+            лайков!</p>
+
+          <cite class="review__item--author">
+     Анастасия Красильникова
+      <span class="review__item--hashtag">@misssssiskras</span>
+    </cite>
+        </blockquote>
+      </div>
+
+      <button class="ghost-btn__arrow ghost-btn__arrow--left" type="button">Влево</button>
+      <button class="ghost-btn__arrow ghost-btn__arrow--right" type="button">Вправо</button>
+
+      <a href="#" class="ghost-btn">Написать</a>
+    </div>
+
+    <div class="contacts">
+      <h4 class="contacts__title">Контакты</h4>
+      <table>
+        <tr>
+          <td>e-mail:</td>
+          <td><a class="contacts__mail">info@mimimishkashop.ru</a></td>
+        </tr>
+        <tr>
+          <td>адрес:</td>
+          <td>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+        </tr>
+      </table>
+      <div class="contacts_map">
+        <img src="img/map-tablet.jpg" alt="">
+      </div>
+      <a href="" class="contacts__post ghost-btn">Напишите нам</a>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__social">
+      <span class="social-links">
+      <a class="social-link social-link--vkontakte" href="#">Вконтакте</a>
+      <a class="social-link social-link--facebook" href="#">Фейсбук</a>
+      <a class="social-link social-link--twitter" href="#">твиттер</a>
+    </span>
+    </div>
+    <div class="page-footer__copyright">
+      <p class="page-footer__copyright">
+        Разработано
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
+  </footer>
 </body>
 
 </html>
