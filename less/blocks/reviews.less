@@ -1,20 +1,39 @@
-.reviews {
-  margin: 30px 20px;
+.reviews__wrap {
+  .container();
+  padding: 0 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .reviews__title {
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
-  color: #000000;
+  color: #000;
 }
 
 .review__item {
   padding: 0;
   margin: 0;
+
+  &--author {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  &--hashtag {
+    display: block;
+    font-size: 17px;
+    line-height: 30px;
+    color: #444;
+    font-weight: normal;
+  }
 }
 
 .review__text {
+  margin-bottom: 20px;
   font-size: 15px;
   line-height: 30px;
   color: #444;
@@ -22,19 +41,4 @@
 
 .review__post {
   font-size: 18px;
-}
-
-.review__item--author {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  color: #000;
-}
-
-.review__item--hashtag {
-  display: block;
-  font-size: 17px;
-  line-height: 30px;
-  color: #444;
-  font-weight: normal;
 }

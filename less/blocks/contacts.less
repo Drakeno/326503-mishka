@@ -1,42 +1,35 @@
-.contacts {
-
-}
-
-.contacts__item {
-  margin: 0 20px;
+.contacts__wrap {
+  .container();
+  padding: 0 30px;
 }
 
 .contacts__title {
-  margin: 0 20px;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
   color: #000;
 }
 
-.contacts__text,
-.contacts__data {
+.contacts__data,
+.contacts__text {
   display: inline-block;
+  vertical-align: top;
   font-size: 15px;
   line-height: 30px;
   color: #444;
 }
 
 .contacts__text {
-  display: inline-block;
-  vertical-align: top;
-  width: 80px;
-}
-
-.contacts__text--mail {
-  border-bottom: 1px solid #62d1ba;
+  width: 30%;
+  &--mail {
+    border-bottom: 1px solid #62d1ba;
+  }
 }
 
 .contacts__data {
-  width: 120px;
-  display: inline-block;
+width: 50%;
 }
 
 .contacts__post {
-  margin: 0 20px;
+  margin: 40px 30px;
 }

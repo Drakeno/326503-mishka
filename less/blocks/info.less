@@ -1,16 +1,19 @@
 .info {
   border: 1px solid #ededed;
-  margin: 30px 20px;
   width: 260px;
 }
 
 .info__title {
-  padding: 10px;
-  padding-left: 90px;
+  padding: 10px 10px 10px 90px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
   color: #000;
+
+  &--video {
+    position: relative;
+    background: url("../img/icon-video.svg") no-repeat left 30px top 15px;
+  }
 }
 
 .info__description {
@@ -18,9 +21,4 @@
   font-size: 13px;
   line-height: 24px;
   color: #444;
-}
-
-.info__title--video {
-  position: relative;
-  background: url("../img/icon-video.svg") no-repeat left 30px top 15px;
 }
