@@ -1,0 +1,56 @@
+.about__wrap {
+  .container();
+  padding: 0 30px;
+}
+
+.about__list {
+  list-style: none;
+}
+
+.about__title {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+.about__list {
+  padding: 0;
+}
+
+.about__item {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000;
+
+  &::before {
+    content: "";
+    display: block;
+    padding: 30px 0;
+  }
+
+  &--flower::before {
+    background: url("../img/icon-feature-1.svg") no-repeat left;
+  }
+
+  &--banknote::before {
+    background: url("../img/icon-feature-3.svg") no-repeat left;
+  }
+
+  &--heart::before {
+    background: url("../img/icon-feature-5.svg") no-repeat left;
+  }
+
+  &--thread::before {
+    background: url("../img/icon-feature-2.svg") no-repeat left;
+  }
+
+  &--rocket::before {
+    background: url("../img/icon-feature-4.svg") no-repeat left;
+  }
+
+  &--box::before {
+    background: url("../img/icon-feature-6.svg") no-repeat left;
+  }
+}
