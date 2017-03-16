@@ -1,6 +1,6 @@
 .main-item__wrap {
-  .container();
-  padding: 10px 30px;
+  .wrap();
+  .box();
 }
 
 .main-item__title {
@@ -20,6 +20,7 @@
 }
 
 .main-item__text {
+  width: 260px;
   font-size: 15px;
   line-height: 24px;
   color: #444;
@@ -40,6 +41,30 @@
   color: #444;
 }
 
-.main-item__buy {
+@media @tablet-widths {
+  .main-item__wrap {
+    .flex();
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+    justify-content: baseline;
+    align-content: space-between;
+  }
 
+  .main-item__weekly {
+    align-self: flex-end;
+    order: -1;
+  }
+
+  .main-item img {
+    order: 2;
+    align-self: flex-end;
+    width: 260px;
+  }
+}
+
+@media @desktop-widths {
+  .main-item__wrap {
+    padding-left: 175px;
+  }
 }

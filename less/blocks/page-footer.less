@@ -1,4 +1,12 @@
 .page-footer {
+  .box();
+  .wrap();
+  .container();
+  .flex();
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
   background-color: #f1f1f1;
 }
 
@@ -7,6 +15,22 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.page-footer__link {
+.page-footer__copyright {
+  .flex();
+  justify-content: center;
+  align-items: baseline;
+}
 
+.page-footer__logo {
+  display: none;
+
+}
+
+@media @tablet-widths {
+  .page-footer__logo {
+    display: block;
+    background: red;
+    width: 102px;
+    height: 34px;
+  }
 }

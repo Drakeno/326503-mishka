@@ -1,6 +1,6 @@
 .about__wrap {
-  .container();
-  padding: 0 30px;
+  .wrap();
+  .box();
 }
 
 .about__list {
@@ -52,5 +52,27 @@
 
   &--box::before {
     background: url("../img/icon-feature-6.svg") no-repeat left;
+  }
+}
+
+@media @tablet-widths {
+  .about__list {
+    .flex;
+    width: 100%;
+    height: 350px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .about__item {
+    width: 330px;
+    .box();
+  }
+}
+
+@media @desktop-widths {
+  .about__list {
+    padding: 0 175px;
+    .box();
   }
 }
