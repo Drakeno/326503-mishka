@@ -1,3 +1,20 @@
 .main-header {
+  .flex();
+  .container();
+  .box();
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
 
+.main-header__logo {
+  margin: 0 auto;
+  align-self: center;
+  justify-content: center;
+}
+
+@media @tablet-widths {
+  .main-header {
+    height: 90px;
+    .wrap();
+  }
 }
