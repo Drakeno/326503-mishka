@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Мишка - Каталог Товаров</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
+  <title>Мишка - Каталог Товаров</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -28,40 +27,34 @@
 
   <main class="inner-page">
     <h1 class="inner-page__title">Каталог товаров</h1>
-    <article class="inner-page__wrap">
+
+    <article class="inner-page__items">
       <div class="item">
         <img src="img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
         <h2 class="item__title">Зайчик-попрыгайчик</h2>
         <p class="item__description">Рост 30 см, вес 200 г</p>
-        <div class="item__buy-line">
-          <span class="item__price">1 200 руб.</span>
-          <a href="#" class="item__buy-btn"></a>
-        </div>
+        <span class="item__price">1 200 руб.</span>
+        <button class="item__buy-btn" type="button">Купить</button>
       </div>
 
       <div class="item">
         <img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья">
         <h2 class="item__title">Корзинка для белья</h2>
         <p class="item__description">Диаметр 15 см, высота 10 см</p>
-        <div class="item__buy-line">
-          <span class="item__price">690 руб.</span>
-          <a href="#" class="item__buy-btn"></a>
-        </div>
+        <span class="item__price">690 руб.</span>
+        <button class="item__buy-btn" type="button">Купить</button>
       </div>
 
       <div class="item">
         <img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек">
         <h2 class="item__title">Большая корзинка для игрушек</h2>
         <p class="item__description">Диаметр 30 см, высота 30 см</p>
-        <div class="item__buy-line">
-          <span class="item__price">1 500 руб.</span>
-          <a href="#" class="item__buy-btn"></a>
-        </div>
+        <span class="item__price">1 500 руб.</span>
+        <button class="item__buy-btn" type="button">Купить</button>
       </div>
-
     </article>
 
-    <section class="inner-page__wrap">
+    <section class="inner-page__info">
       <article class="info">
         <h2 class="info__title info__title--video">Процесс производства</h2>
         <div class="info__media">
@@ -69,11 +62,10 @@
           <span class="info__playbtn"></span>
         </div>
         <p class="info__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-
-        <a href="form.html" class="ghost-btn inner-page__order">Сделать заказ</a>
       </article>
-
     </section>
+
+    <a href="form.html" class="inner-page__order ghost-btn">Сделать заказ</a>
 
     <footer class="page-footer">
       <div class="page-footer__social">
