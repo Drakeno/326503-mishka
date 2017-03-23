@@ -1,20 +1,15 @@
 .main-header {
-  .flex();
-  .container();
-  .box();
+  .no-outline();
+  position: relative;
+  box-sizing: border-box;
   height: 80px;
+  background: #fff;
   border-bottom: 1px solid #ececec;
-}
-
-.main-header__logo {
-  margin: 0 auto;
-  align-self: center;
-  justify-content: center;
+  border-top: 1px solid #ececec;
 }
 
 @media @tablet-widths {
   .main-header {
     height: 90px;
-    .wrap();
   }
 }

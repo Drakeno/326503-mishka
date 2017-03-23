@@ -1,8 +1,8 @@
 .page-footer {
-  .box();
   .wrap();
-  .container();
-  .flex();
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -16,17 +16,19 @@
 }
 
 .page-footer__copyright {
-  .flex();
+  display: flex;
   justify-content: center;
   align-items: baseline;
 }
 
 .page-footer__logo {
   display: none;
-
 }
-
 @media @tablet-widths {
+  .page-footer {
+    flex-direction: row;
+  }
+
   .page-footer__logo {
     display: block;
     background: red;
