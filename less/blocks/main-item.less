@@ -58,35 +58,39 @@
 
 @media @tablet-widths {
   .main-item {
+    position: relative;
     .rub-container();
     max-width: 768px;
     padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    height: 600px;
   }
 
   .main-item__caption {
     display: flex;
     margin-top: 0;
-    align-items: center;
+    justify-content: space-between;
+    order: -1;
   }
 
   .main-item__title {
-    flex-grow: 1;
+    white-space: nowrap;
     font-size: 43px;
     line-height: 50px;
-  }
+    flex-grow: 1;
+    width: 350px;
+}
 
   .main-item__weekly {
+    position: absolute;
+    right: 0px;
+    top: 70px;
     text-align: center;
-    flex-grow: 0;
     width: 80px;
     padding: 0 28px;
-  }
-
-  .main-item__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   .main-item__description {
@@ -107,22 +111,21 @@
   }
 
   .main-item__buy {
-    width: 290px;
+      margin: 0;
   }
 
   .main-item__order {
-    min-width: 260px;
-    max-width: 334px;
+    order: 3;
+    width: 290px;
   }
 
   .main-item__image {
-    order: 2;
-    width: 50%;
+    order: 4;
+    width: 333px;
+    height: 404px;
   }
 
   .main-item__image img {
-    position: absolute;
-    z-index: 1;
     width: 333px;
     height: 404px;
   }
@@ -132,33 +135,34 @@
   }
 }
 @media @desktop-widths {
-  .main-item__image {}
+  .main-item {
+    height: 756px;
+    padding-left: 175px;
+  }
 
   .main-item__title {
+    position: relative;
+    z-index: 2;
     font-size: 53px;
     line-height: 57px;
     order: 1;
-    position: relative;
   }
 
   .main-item__caption {
-    position: absolute;
-    z-index: 2;
-  }
+    margin-top: 50px;
+    width: 40%;
+}
 
   .main-item__weekly {
+    left: 0px;
+    top: 115px;
+    position: absolute;
     width: 115px;
     line-height: 17px;
   }
 
-  .main-item__content {
-    padding-left: 175px;
-    min-height: 636px;
-  }
-
   .main-item__description {
     flex-grow: 1;
-    margin-top: 100px;
     width: 293px;
     padding: 0;
   }
@@ -169,6 +173,7 @@
 
   .main-item__image {
     width: 525px;
+    height: 636px;
   }
 
   .main-item__image img {

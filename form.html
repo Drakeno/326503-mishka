@@ -11,17 +11,24 @@
 <body>
 
   <header class="main-header">
-    <div class="main-header__logo">
-      <a href="index.html"><img src="img/logo-mobile.svg" alt="Магазин Мишка"></a>
-    </div>
-    <nav class="main-navigation main-navigation--closed">
-      <button class="main-navigation__btn" type="button">Меню</button>
-      <ul class="main-navigation__dropdown">
+    <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+      <div class="main-navigation__logo">
+        <a href="index.html"><img src="img/logo-mobile.svg" width="86px" height="80px" alt="Магазин Мишка"></a>
+      </div>
+      <button class="main-navigation__btn" type="button"></button>
+      <ul class="main-navigation__menu">
         <li class="main-navigation__link"><a href="catalog.html">Каталог товаров</a></li>
-        <li class="main-navigation__link"><a>Вязание на заказ</a></li>
-        <li class="main-navigation__link main-navigation__link--search"><a href="#">Поиск по сайту</a></li>
-        <li class="main-navigation__link main-navigation__link--cart"><a href="#">Корзина: пока пуста</a></li>
+        <li class="main-navigation__link"><a href="form.html">Вязание на заказ</a></li>
       </ul>
+      <ul class="main-navigation__user-items">
+        <li class="main-navigation__user-link main-navigation__user-link--search"><a href="#">Поиск по сайту</a></li>
+        <li class="main-navigation__user-link main-navigation__user-link--cart"><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+      <ul class="main-navigation__add-links">
+        <li class="main-navigation__add-link"><a href="#">Новые поступления</a></li>
+        <li class="main-navigation__add-link"><a href="#">Распродажа</a></li>
+      </ul>
+      <p class="main-navigation__notice">Бесплатная доставка по России</p>
     </nav>
   </header>
 
@@ -131,6 +138,23 @@
       <a class="page-footer__link page-footer__link--copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-navigation');
+    var navBtn = document.querySelector('.main-navigation__btn');
+
+    navMain.classList.remove('main-navigation--nojs');
+
+    navBtn.addEventListener('click', function() {
+      if (navMain.classList.contains('main-navigation--closed')) {
+        navMain.classList.remove('main-navigation--closed');
+        navMain.classList.add('main-navigation--opened');
+      } else {
+        navMain.classList.add('main-navigation--closed');
+        navMain.classList.remove('main-navigation--opened');
+      }
+    });
+  </script>
 
 </body>
 
