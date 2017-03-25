@@ -1,5 +1,7 @@
-.form-checkbox {
-
+.form-checkbox__wrapper {
+  .flex-wrap();
+  .container();
+  box-sizing: border-box;
 }
 
 .form-checkbox__title {
@@ -19,4 +21,35 @@
   line-height: 18px;
   color: #000;
   font-weight: bold;
+}
+@media @tablet-widths {
+  .form-checkbox {
+    margin: 0;
+    width: 100%;
+  }
+
+  .form-checkbox__wrapper {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form-checkbox__title {
+    background: #f1f1f1;
+  }
+
+  .form-checkbox__item {
+    width: 240px;
+    padding: 25px 0;
+    margin-right: 10px;
+  }
+
+  .form-checkbox__caption {
+    font-size: 19px;
+  }
+
+  .form-checkbox__selectors {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
