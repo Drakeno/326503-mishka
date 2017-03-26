@@ -11,13 +11,12 @@
 
 .inner-page__wrap {
   .container();
-  padding: 0 30px;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  .flex-wrap();
   box-sizing: border-box;
 }
 
-.inner-page__wrap--form {
+.inner-page__cont {
+  .container();
   .flex-wrap();
   box-sizing: border-box;
 }
@@ -47,6 +46,13 @@
 
   .inner-page__wrap {
     .rub-container();
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .inner-page__cont {
+    .container();
   }
 
   .inner-page__intro {
