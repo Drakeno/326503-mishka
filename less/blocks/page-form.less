@@ -1,6 +1,4 @@
 .page-form {
-  .container();
-  .flex-wrap;
   box-sizing: border-box;
 }
 
@@ -17,6 +15,18 @@
     border-bottom: 1px solid #62d1ba;
   }
 }
+
+.page-form__wrap {
+  .container();
+  .flex-wrap;
+  box-sizing: border-box;
+}
+
+.page-form__bigwrap {
+  .flex-wrap;
+  box-sizing: border-box;
+}
+
 @media @tablet-widths {
   .page-form__title {
     position: relative;
@@ -26,6 +36,15 @@
     &::after {
       display: none;
     }
+  }
+
+  .page-form--gray {
+    background: #f1f1f1;
+  }
+
+  .page-form--dataform {
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 }
 @media @desktop-widths {
