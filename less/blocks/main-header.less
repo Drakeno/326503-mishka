@@ -1,7 +1,15 @@
 .main-header {
-
+  .no-outline();
+  position: relative;
+  box-sizing: border-box;
+  height: 80px;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  border-top: 1px solid #ececec;
 }
 
-.main-header__logo {
-  text-align: center;
+@media @tablet-widths {
+  .main-header {
+    height: 90px;
+  }
 }

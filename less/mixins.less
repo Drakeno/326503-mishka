@@ -1,23 +1,81 @@
 .clearfix() {
   &::after {
+    content: "";
     display: table;
     clear: both;
-    content: "";
   }
+}
 
-  &::before {
-    display: table;
-    content: "";
+.wrap {
+  padding: 10px 30px;
+
+  @media @tablet-widths {
+    padding: 10px 50px;
+  }
+}
+
+.flex-wrap {
+  padding: 0 30px;
+
+  @media @tablet-widths {
+    padding: 0px 50px;
   }
 }
 
 .container() {
-  min-width: 260px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
+
+  @media @tablet-widths {
+    width: 768px;
+  }
+  @media @desktop-widths {
+    width: 1150px;
+  }
+}
+
+.rub-container() {
+  width: auto;
+
+  @media @tablet-widths {
+    min-width: 668px;
+    width: 87%;
+    max-width: 768px; /* Временно */
+    margin: 0 auto;
+  }
+
+  @media @desktop-widths {
+    min-width: 1050px;
+  }
 }
 
 .btn-container() {
   margin-left: auto;
   margin-right: auto;
+}
+
+.link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hover {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
 }
