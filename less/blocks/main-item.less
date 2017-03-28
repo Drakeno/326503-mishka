@@ -1,5 +1,5 @@
 .main-item {
-  .container();
+  .rub-container();
   .flex-wrap();
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@
 }
 
 .main-item__description {
-  width: 260px;
+  min-width: 260px;
 }
 
 .main-item__text {
@@ -32,6 +32,7 @@
 }
 
 .main-item__description table {
+  width: 100%;
   font-size: 15px;
   line-height: 20px;
   color: #444;
@@ -40,6 +41,17 @@
 .main-item__description table td {
   padding: 10px;
   border-bottom: 1px solid #ececec;
+}
+
+.main-item__image {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align:right;
+}
+
+.main-item__order {
+  width: 260px;
+  margin: 0 auto;
 }
 
 .main-item__price {
@@ -54,6 +66,7 @@
 
 .main-item__buy {
   width: 100%;
+  max-width: 293px;
 }
 
 @media @tablet-widths {

@@ -1,5 +1,5 @@
 .reviews {
-  .container();
+  .rub-container();
 }
 
 .reviews__wrap {
@@ -43,13 +43,24 @@
   color: #444;
 }
 
+.reviews__arrows {
+  text-align: center;
+}
+
 .reviews__post {
+  max-width: 260px;
   font-size: 18px;
   padding-top: 14px;
+  margin: 0 auto;
 }
+
+
 @media @tablet-widths {
   .reviews {
+    min-width: 668px;
+    max-width: none;
     width: 100%;
+    margin: 0 auto;
     padding: 60px 0;
     background: #ececec;
   }
@@ -77,6 +88,7 @@
     width: 175px;
     max-width: 175px;
     height: 52px;
+    margin: 0;
     font-size: 17px;
   }
 

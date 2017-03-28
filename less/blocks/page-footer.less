@@ -55,6 +55,7 @@
 }
 
 .page-footer__text {
+  margin-right: 30px;
   font-size: 19px;
   line-height: 18px;
   font-weight: bold;
@@ -63,8 +64,6 @@
 .page-footer__logo {
   display: none;
 }
-
-
 @media @tablet-widths {
   .page-footer__cont {
     .rub-container();
@@ -79,7 +78,11 @@
   .page-footer__link {
     font-size: 0;
     padding: 25px;
-}
+
+    &--copyright {
+      padding: 0;
+    }
+  }
 
   .page-footer__logo {
     width: 33%;
@@ -93,5 +96,6 @@
 
   .page-footer__copyright {
     width: 33%;
+    justify-content: flex-end;
   }
 }
