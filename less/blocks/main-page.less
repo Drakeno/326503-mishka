@@ -8,7 +8,14 @@
   font-weight: bold;
   color: #010000;
   text-align: center;
-  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat top -20px center;
+  background: #f9f9f9;
+  background-position: top -20px center;
+  background-repeat: no-repeat;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  @media @retina {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
 }
 
 .main-page__wrap {
@@ -75,7 +82,6 @@
   /*здесь картинка зиг-заг линии*/
   padding-bottom: 30px;
 }
-
 @media @tablet-widths {
   .main-page__title {
     display: flex;
@@ -83,9 +89,15 @@
     justify-content: center;
     margin: 0 auto;
     padding: 0;
-    height: 570px;
+    height: 626px;
     font-size: 47px;
     line-height: 50px;
+    background-position: top center;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    @media @retina {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
   }
 
   .main-page__big-btn {
@@ -109,7 +121,6 @@
     width: 100%;
   }
 }
-
 @media @desktop-widths {
   .main-page__title {
     font-size: 53px;
