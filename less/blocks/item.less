@@ -1,12 +1,32 @@
 .item {
   border: 1px solid #ededed;
-  width: 260px;
+  min-width: 260px;
   margin-bottom: 30px;
   margin-top: 30px;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
-.item__title {
+.item___image-wrap {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.item img {
+  width: 260px;
+}
+
+.item__title a {
+  .link();
+  .hover();
   padding: 0 27px;
+  margin: 22px 0 0;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -15,6 +35,8 @@
 
 .item__description {
   padding: 0 27px;
+  margin-top: 3px;
+  margin-bottom: 19px;
   font-size: 13px;
   line-height: 30px;
   color: #444;
@@ -28,7 +50,7 @@
 }
 
 .item__buy-line {
-  padding: 13px 0;
+  padding: 23px 0;
   margin: 0 27px;
   border-top: 1px solid #ededed;
 }
@@ -37,7 +59,20 @@
   width: 20px;
   height: 20px;
   float: right;
-  background: url("../img/icon-cart.svg") no-repeat;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.item__buy-btn:hover path {
+  fill: @light-blue;
+  opacity: 1;
 }
 @media @tablet-widths {
   .item {
@@ -48,13 +83,20 @@
     height: 334px;
     margin-bottom: 55px;
     margin-top: 55px;
+    text-align: left;
   }
 
-  .item__title {
+  .item___image-wrap {
+    width: 334px;
+    background-color: transparent;
+  }
+
+  .item__title a {
     width: 230px;
     padding: 0;
     margin-top: 25px;
     margin-bottom: 0;
+    margin-left: 27px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -62,6 +104,7 @@
   .item__description {
     padding: 0;
     margin-top: 0;
+    margin-left: 27px;
     flex-grow: 1;
   }
 
