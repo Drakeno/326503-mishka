@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+  <div class="order-popup__overlay"></div>
   <header class="main-header">
     <nav class="main-navigation main-navigation--closed main-navigation--nojs">
       <div class="main-navigation__logo">
@@ -210,6 +210,25 @@
     </footer>
   </main>
 
+  <div class="order-popup">
+    <h3 class="order-popup__title">Добавить в корзину</h3>
+    <p class="order-popup__hint">Выберите размер:</p>
+    <form class="order-popup__form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="order-popup__size">
+        <label class="order-popup__item">
+          <input class="order-popup__btn" name="size"  type="button" value="S">
+        </label>
+        <label for="order-popup__item">
+          <input class="order-popup__btn" name="size"  type="button" value="M">
+        </label>
+        <label for="order-popup__item">
+          <input class="order-popup__btn" name="size"  type="button" value="L">
+        </label>
+      </div>
+      <input class="ghost-btn order-popup__buy" type="submit" value="Добавить"></input>
+    </form>
+  </div>
+
   <script>
     var navMain = document.querySelector('.main-navigation');
     var navBtn = document.querySelector('.main-navigation__btn');
@@ -223,6 +242,34 @@
       } else {
         navMain.classList.add('main-navigation--closed');
         navMain.classList.remove('main-navigation--opened');
+      }
+    });
+  </script>
+
+  <script>
+    var link = document.querySelector(".item__buy-btn");
+    var popup = document.querySelector(".order-popup");
+    var bcground = document.querySelector(".order-popup__overlay");
+
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.add("order-popup--on");
+      bcground.classList.add("order-popup--on");
+    });
+
+    window.addEventListener("keydown", function(event) {
+      if (event.keyCode === 27) {
+        if (popup.classList.contains("order-popup--on")) {
+          popup.classList.remove("order-popup--on");
+        }
+      }
+    });
+
+    window.addEventListener("keydown", function(event) {
+      if (event.keyCode === 27) {
+        if (bcground.classList.contains("order-popup--on")) {
+          bcground.classList.remove("order-popup--on");
+        }
       }
     });
   </script>

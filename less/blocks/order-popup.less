@@ -1,0 +1,109 @@
+.order-popup {
+  min-width: 320px;
+  display: none;
+  position: fixed;
+  z-index: 35;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 30px 30px 25px;
+  background: #fff;
+  border-top: 1px solid #c7c7c7;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+
+.order-popup__overlay {
+  position: fixed;
+  display: none;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.order-popup--on {
+  display: block;
+}
+
+.order-popup__title {
+  width: 150px;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.order-popup__hint {
+  margin-top: 13px;
+  margin-bottom: 23px;
+  font-size: 17px;
+  line-height: 30px;
+  color: #444;
+  text-align: center;
+}
+
+.order-popup__form {
+  min-width: 260px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.order-popup__size {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-popup__btn {
+  width: 82px;
+  height: 52px;
+  border: 2px solid rgba(68,68,68,0.1);
+  background: #fff;
+  box-sizing: border-box;
+  outline: none;
+
+  &:hover {
+    border-color: rgba(68,68,68,0.3);
+  }
+
+  &:active {
+    border-color: @light-blue;
+  }
+}
+
+.order-popup__buy {
+  min-width: 260px;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 30px;
+  color: #fff;
+  background-color: @light-blue;
+  border: none;
+}
+@media @tablet-widths {
+  .order-popup {
+    width: 568px;
+    left: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    padding-left: 106px;
+    padding-right: 106px;
+    margin-left: -284px;
+    border: 1px solid #c7c7c7;
+  }
+
+  .order-popup__title {
+    width: auto;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .order-popup__btn {
+    width: 113px;
+  }
+
+}

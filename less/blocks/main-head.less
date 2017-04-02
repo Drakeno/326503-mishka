@@ -1,13 +1,6 @@
-.main-page__title {
-  height: 282px;
-  padding-top: 75px;
-  margin: 0;
+.main-head {
+  height: 488px;
   box-sizing: border-box;
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: bold;
-  color: #010000;
-  text-align: center;
   background: #f9f9f9;
   background-position: top -19px center;
   background-repeat: no-repeat;
@@ -22,12 +15,22 @@
   }
 }
 
-.main-page__wrap {
+.main-head__title {
+  padding-top: 75px;
+  margin: 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #010000;
+  text-align: center;
+}
+
+.main-head__wrap {
   .rub-container();
   box-sizing: border-box;
 }
 
-.main-page--separator {
+.main-head--separator {
   &::after {
     display: block;
     content: "";
@@ -38,8 +41,11 @@
   }
 }
 
+.main-head__buttons {
+  margin-top: 150px;
+}
 
-.main-page__big-btn {
+.main-head__big-btn {
   position: relative;
   z-index: 1;
   display: block;
@@ -53,10 +59,6 @@
   background: #63d1bb;
   box-sizing: border-box;
 
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-
   &--furniture {
     background: #63d1bb;
   }
@@ -66,13 +68,13 @@
   }
 }
 
-.main-page__big-btn span {
+.main-head__big-btn span {
   display: inline-block;
   vertical-align: top;
   width: 110px;
 }
 
-.main-page__big-btn svg {
+.main-head__big-btn svg {
   display: inline-block;
   vertical-align: top;
   margin-top: -3px;
@@ -81,17 +83,25 @@
   opacity: 0.5;
 }
 
-.main-page__big-btn:hover svg {
+.main-head__big-btn:hover svg {
   opacity: 0.7;
 }
 
-.main-page__big-btn:active span,
-.main-page__big-btn:active svg {
+.main-head__big-btn:active span,
+.main-head__big-btn:active svg {
   opacity: 0.3;
 }
 @media @tablet-widths {
-  .main-page--separator {
+  .main-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 766px;
+    background-position: top center;
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
 
+  .main-head--separator {
     &::after {
       margin-top: 50px;
       width: 100%;
@@ -101,20 +111,15 @@
     }
   }
 
-  .main-page__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .main-head__title {
     margin: 0 auto;
-    padding: 0;
-    height: 766px;
+    padding: 155px 0 0;
     font-size: 47px;
     line-height: 50px;
-    background-position: top center;
-    background-image: url("../img/hero-desktop@1x.jpg");
+    flex-grow: 1;
   }
 
-  .main-page__big-btn {
+  .main-head__big-btn {
     width: 100%;
     height: auto;
     font-size: 20px;
@@ -122,6 +127,7 @@
     margin-top: 10px;
     margin-bottom: 0;
     padding: 27px 33px 53px 35px;
+    transition: margin 0.2s ease-out;
 
     &--furniture {
       padding-right: 26px;
@@ -129,15 +135,12 @@
 
     &:hover {
       margin-top: 5px;
-      transition: margin 0.2s ease-out;
     }
   }
 
-  .main-page__buttons {
+  .main-head__buttons {
     position: relative;
     z-index: 1;
-    margin-top: -150px;
-    margin-bottom: 0;
 
     &::after {
       content: "";
@@ -150,29 +153,28 @@
     }
   }
 
-  .main-page__wrap {
+  .main-head__wrap {
     display: flex;
     flex-direction: row;
   }
 }
 @media @desktop-widths {
-  .main-page--separator {
-
+  .main-head--separator {
     &::after {
       height: 23px;
     }
   }
 
-  .main-page__title {
+  .main-head__title {
     font-size: 53px;
     line-height: 57px;
   }
 
-  .main-page__buttons {
+  .main-head__buttons {
     margin-top: -145px;
   }
 
-  .main-page__big-btn {
+  .main-head__big-btn {
     padding-bottom: 48px;
   }
 }

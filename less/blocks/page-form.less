@@ -4,15 +4,16 @@
 
 .page-form__title {
   position: relative;
+  margin-bottom: 15px;
 
   &::after {
-    width: 198px;
+    width: 75%;
     height: 1px;
     top: 6px;
-    left: 62px;
+    left: 25%;
     position: absolute;
     content: "";
-    border-bottom: 1px solid #62d1ba;
+    border-bottom: 1px solid @mid-blue;
   }
 }
 
@@ -26,14 +27,14 @@
   .flex-wrap;
   box-sizing: border-box;
 }
-
 @media @tablet-widths {
   .page-form__title {
     position: relative;
     min-width: 167px;
     margin: 25px 0;
+    box-sizing: border-box;
 
-    &::after {
+      &::after {
       display: none;
     }
   }
@@ -49,6 +50,7 @@
 }
 @media @desktop-widths {
   .page-form__title {
-    min-width: 175px;
+    width: 175px;
+    padding-left: 62px;
   }
 }
