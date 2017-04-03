@@ -24,12 +24,6 @@ navBtn.addEventListener("click", function() {
   });
 });
 
-itemLink.addEventListener("click", function(event) {
-  event.preventDefault();
-  popup.classList.add("order-popup--on");
-  bcground.classList.add("order-popup--on");
-});
-
 bcground.addEventListener("click", function(event) {
   popup.classList.remove("order-popup--on");
   bcground.classList.remove("order-popup--on");
@@ -49,4 +43,10 @@ window.addEventListener("keydown", function(event) {
       bcground.classList.remove("order-popup--on");
     }
   }
+});
+
+itemLink.addEventListener("click", function(event) {
+  event.preventDefault();
+  popup.classList.add("order-popup--on");
+  bcground.classList.add("order-popup--on");
 });

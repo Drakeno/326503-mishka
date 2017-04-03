@@ -37,6 +37,10 @@
   &:hover::before {
     border-color: @light-blue;
   }
+
+  &:active::before {
+    border-color: rgba(68,68,68,0.3);
+  }
 }
 
 .form-checkbox__caption {
@@ -93,6 +97,15 @@
 
     &:hover::after {
       top: 16px;
+      left: 18px;
+      width: 20px;
+      height: 28px;
+    }
+  }
+
+  .form-checkbox__input {
+    &:checked+.form-checkbox__item::after {
+      top: 17px;
       left: 18px;
       width: 15px;
       height: 28px;

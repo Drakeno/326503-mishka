@@ -307,23 +307,20 @@
   </footer>
 
   <div class="order-popup">
-    <h3 class="order-popup__title">Добавить в корзину</h3>
-    <p class="order-popup__hint">Выберите размер:</p>
-    <form class="order-popup__form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="order-popup__size">
-        <label class="order-popup__item">
-          <input class="order-popup__btn" name="size"  type="button" value="S">
-        </label>
-        <label class="order-popup__item">
-          <input class="order-popup__btn" name="size"  type="button" value="M">
-        </label>
-        <label class="order-popup__item">
-          <input class="order-popup__btn" name="size"  type="button" value="L">
-        </label>
-      </div>
-      <input class="ghost-btn order-popup__buy" type="submit" value="Добавить">
-    </form>
-  </div>
+  <h3 class="order-popup__title">Добавить в корзину</h3>
+  <p class="order-popup__hint">Выберите размер:</p>
+  <form class="order-popup__form" action="https://echo.htmlacademy.ru" method="post">
+    <div class="order-popup__size">
+      <input id="size-s" class="order-popup__btn" type="radio" value="s" name="size">
+      <label for="size-s" class="order-popup__item">S</label>
+      <input id="size-m" class="order-popup__btn" type="radio" value="m" name="size">
+      <label for="size-m" class="order-popup__item">M</label>
+      <input id="size-l" class="order-popup__btn" type="radio" value="l" name="size">
+      <label for="size-l" class="order-popup__item">L</label>
+    </div>
+    <input class="ghost-btn order-popup__buy" type="submit" value="Добавить">
+  </form>
+</div>
 <script src="js/main.js"></script>
 <script src="js/picturefill.js"></script>
 </body>
