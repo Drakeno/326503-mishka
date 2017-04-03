@@ -1,18 +1,18 @@
-var navMain = document.querySelector('.main-navigation');
-var navBtn = document.querySelector('.main-navigation__btn');
+var navMain = document.querySelector(".main-navigation");
+var navBtn = document.querySelector(".main-navigation__btn");
 var itemLink = document.querySelector(".main-item__buy");
 var popup = document.querySelector(".order-popup");
 var bcground = document.querySelector(".order-popup__overlay");
 
-navMain.classList.remove('main-navigation--nojs');
+navMain.classList.remove("main-navigation--nojs");
 
-navBtn.addEventListener('click', function() {
-  if (navMain.classList.contains('main-navigation--closed')) {
-    navMain.classList.remove('main-navigation--closed');
-    navMain.classList.add('main-navigation--opened');
+navBtn.addEventListener("click", function() {
+  if (navMain.classList.contains("main-navigation--closed")) {
+    navMain.classList.remove("main-navigation--closed");
+    navMain.classList.add("main-navigation--opened");
   } else {
-    navMain.classList.add('main-navigation--closed');
-    navMain.classList.remove('main-navigation--opened');
+    navMain.classList.add("main-navigation--closed");
+    navMain.classList.remove("main-navigation--opened");
   }
 });
 
