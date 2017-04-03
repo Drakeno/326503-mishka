@@ -1,6 +1,6 @@
 var navMain = document.querySelector(".main-navigation");
 var navBtn = document.querySelector(".main-navigation__btn");
-var itemCart = document.querySelector(".item__buy-btn");
+var itemLink = document.querySelector(".main-item__buy");
 var popup = document.querySelector(".order-popup");
 var bcground = document.querySelector(".order-popup__overlay");
 
@@ -16,7 +16,7 @@ navBtn.addEventListener("click", function() {
   }
 });
 
-itemCart.addEventListener("click", function(event) {
+itemLink.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.add("order-popup--on");
   bcground.classList.add("order-popup--on");
