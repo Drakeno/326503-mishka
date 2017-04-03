@@ -21,6 +21,7 @@
   position: relative;
   padding: 21px 40px 21px 65px;
   box-sizing: border-box;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -32,55 +33,78 @@
     box-sizing: border-box;
     border: 2px solid #444;
   }
+
+  &:hover::before {
+    border-color: @light-blue;
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    width: 8px;
+    height: 18px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+  }
 }
-
-.form-checkbox__caption {
-  font-size: 17px;
-  line-height: 18px;
-  color: #000;
-  font-weight: bold;
-}
-
-.form-checkbox__input {
-  display: none;
-}
-@media @tablet-widths {
-  .form-checkbox {
-    margin: 0;
-    width: 100%;
-  }
-
-  .form-checkbox__wrapper {
-    display: flex;
-  }
-
-  .form-checkbox__title {
-    background: #f1f1f1;
-  }
-
-  .form-checkbox__selectors {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .form-checkbox__item {
-    width: 240px;
-    padding: 25px 40px 25px 80px;
-    margin-right: 10px;
-
-    &::before {
-      top: 10px;
-      width: 50px;
-      height: 50px;
-    }
-  }
 
   .form-checkbox__caption {
-    font-size: 19px;
+    font-size: 17px;
+    line-height: 18px;
+    color: #000;
+    font-weight: bold;
   }
 
-  .form-checkbox__selectors {
-    display: flex;
-    flex-wrap: wrap;
+  .form-checkbox__input {
+    display: none;
   }
-}
+  @media @tablet-widths {
+    .form-checkbox {
+      margin: 0;
+      width: 100%;
+    }
+
+    .form-checkbox__wrapper {
+      display: flex;
+    }
+
+    .form-checkbox__title {
+      background: #f1f1f1;
+    }
+
+    .form-checkbox__selectors {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .form-checkbox__item {
+      width: 240px;
+      padding: 25px 40px 25px 80px;
+      margin-right: 10px;
+
+      &::before {
+        top: 10px;
+        width: 52px;
+        height: 52px;
+      }
+
+      &:hover::after {
+        top: 16px;
+        left: 18px;
+        width: 15px;
+        height: 28px;
+      }
+    }
+
+    .form-checkbox__caption {
+      font-size: 19px;
+    }
+
+    .form-checkbox__selectors {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
