@@ -58,11 +58,14 @@
     min-width: 668px;
     max-width: none;
     width: 100%;
+    padding: 60px 0;
+    background: #ececec;
     margin: 0 auto;
     padding: 0;
     background: #fff url("../img/review@1x.jpg") no-repeat top left;
-    @media @retina {
-      background: #fff url("../img/review@2x.jpg") no-repeat top left;
+    @media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
     }
   }
 
@@ -74,6 +77,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-sizing: border-box;
+    background: none;
   }
 
   .reviews__block {
@@ -137,10 +142,10 @@
     width: 1050px;
     padding-left: 175px;
     padding-bottom: 110px;
-
     background: #fff url("../img/review@1x.jpg") no-repeat top left;
-    @media @retina {
-      background: #fff url("../img/review@2x.jpg") no-repeat top left;
+    @media (min-width: 1150px) and (min-resolution: 144dpi), (min-width: 1150px) and (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
     }
   }
 

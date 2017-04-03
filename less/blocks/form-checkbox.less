@@ -1,6 +1,11 @@
+.form-checkbox {
+  margin-bottom: 22px;
+}
+
 .form-checkbox__wrapper {
   .flex-wrap();
   .rub-container();
+  min-width: 260px;
 }
 
 .form-checkbox__title {
@@ -13,6 +18,29 @@
 
 .form-checkbox__item {
   display: block;
+  position: relative;
+  padding: 21px 40px 21px 65px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #444;
+  }
+
+  &:hover::before {
+    border-color: @light-blue;
+  }
+
+  &:active::before {
+    border-color: rgba(68,68,68,0.3);
+  }
 }
 
 .form-checkbox__caption {
@@ -20,6 +48,22 @@
   line-height: 18px;
   color: #000;
   font-weight: bold;
+}
+
+.form-checkbox__input {
+  display: none;
+
+  &:checked+.form-checkbox__item::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    width: 8px;
+    height: 18px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+  }
 }
 @media @tablet-widths {
   .form-checkbox {
@@ -29,18 +73,43 @@
 
   .form-checkbox__wrapper {
     display: flex;
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   .form-checkbox__title {
     background: #f1f1f1;
   }
 
+  .form-checkbox__selectors {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
   .form-checkbox__item {
     width: 240px;
-    padding: 25px 0;
+    padding: 25px 40px 25px 80px;
     margin-right: 10px;
+
+    &::before {
+      top: 10px;
+      width: 52px;
+      height: 52px;
+    }
+
+    &:hover::after {
+      top: 16px;
+      left: 18px;
+      width: 20px;
+      height: 28px;
+    }
+  }
+
+  .form-checkbox__input {
+    &:checked+.form-checkbox__item::after {
+      top: 17px;
+      left: 18px;
+      width: 15px;
+      height: 28px;
+    }
   }
 
   .form-checkbox__caption {
@@ -50,5 +119,11 @@
   .form-checkbox__selectors {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media @desktop-widths {
+  .form-checkbox__selectors {
+    margin-left: 7px;
   }
 }
