@@ -1,5 +1,5 @@
-var navMain = document.querySelector('.main-navigation');
-var navBtn = document.querySelector('.main-navigation__btn');
+var navMain = document.querySelector(".main-navigation");
+var navBtn = document.querySelector(".main-navigation__btn");
 var itemCart = document.querySelectorAll(".item__buy-btn");
 var popup = document.querySelector(".order-popup");
 var bcground = document.querySelector(".order-popup__overlay");

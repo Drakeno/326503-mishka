@@ -51,6 +51,14 @@
   }
 }
 
+.form-checkbox__field {
+  &:checked+label::after
+  {
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+  }
+}
+
   .form-checkbox__caption {
     font-size: 17px;
     line-height: 18px;
