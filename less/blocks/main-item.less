@@ -2,6 +2,17 @@
   width: 100%;
 }
 
+.main-item--separator {
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 7px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x center;
+    background-size: contain;
+  }
+}
+
 .main-item__wrap {
   .rub-container();
   .flex-wrap();
@@ -82,6 +93,16 @@
   max-width: 293px;
 }
 @media @tablet-widths {
+  .main-item--separator {
+    &::after {
+      margin-top: 50px;
+      width: 100%;
+      height: 17px;
+      background: url("../img/bg-zigzag-line.svg") repeat-x center;
+      background-size: contain;
+    }
+  }
+
   .main-item__wrap {
     position: relative;
     .rub-container();
@@ -160,6 +181,12 @@
   }
 }
 @media @desktop-widths {
+  .main-item--separator {
+    &::after {
+      height: 23px;
+    }
+  }
+
   .main-item__wrap {
     height: 700px;
     padding-left: 175px;
