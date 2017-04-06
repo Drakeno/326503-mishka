@@ -84,6 +84,10 @@
   max-width: 293px;
 }
 @media @tablet-widths {
+  .main-item {
+    margin-top: 30px;
+  }
+
   .main-item__wrap {
     position: relative;
     .rub-container();
@@ -93,13 +97,13 @@
     flex-direction: column;
     justify-content: flex-end;
     flex-wrap: wrap;
-    height: 500px;
+    height: 520px;
   }
 
   .main-item__caption {
     width: 334px;
     display: flex;
-    margin-top: 0;
+    margin-top: 8px;
     justify-content: space-between;
     order: -1;
   }
@@ -114,8 +118,8 @@
 
   .main-item__weekly {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -5px;
+    top: 5px;
     text-align: center;
     width: 80px;
     padding: 12px 28px;
@@ -123,6 +127,7 @@
 
   .main-item__description {
     order: 1;
+    flex-grow: 1;
     min-width: 260px;
     max-width: 334px;
     box-sizing: border-box;
@@ -131,20 +136,27 @@
   }
 
   .main-item__text {
+    font-size: 17px;
     line-height: 30px;
   }
 
   .main-item__description table {
-    margin-top: 30px;
+    margin-top: 32px;
+  }
+
+  .main-item__description table td {
+    min-width: 60px;
   }
 
   .main-item__price {
-    margin: 25x 0;
+    margin: 25px 0 35px;
     font-size: 20px;
   }
 
   .main-item__buy {
     margin: 0;
+    padding-top: 13px;
+    padding-left: 23px;
   }
 
   .main-item__order {
@@ -163,7 +175,7 @@
 }
 @media @desktop-widths {
   .main-item__wrap {
-    height: 700px;
+    height: 676px;
     padding-left: 175px;
   }
 
@@ -188,6 +200,7 @@
   }
 
   .main-item__description {
+    flex-grow: 0;
     width: 293px;
     padding: 0;
   }
